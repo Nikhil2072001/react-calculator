@@ -58,13 +58,16 @@ function division(){
   second="";
 }
   return (
-   <div>
+   <div style={{margin:"10% 30%",display:"flex", flexFlow:"column", gap:"15px"}}>
+    <h1 style={{margin:"auto"}}>Calculator</h1>
     <input placeholder='Enter first number' name='first' value={first} onChange={handleChange}/>
     <input placeholder='Enter second number' name='second' value={second} onChange={handleChange}/>
-    <button onClick={addition}>+</button>
-    <button onClick={substraction}>-</button>
-    <button onClick={multiplication}>*</button>
-    <button onClick={division}>/</button>
+    <div style={{display:"flex", justifyContent:"space-evenly"}}>
+    <button style={{backgroundColor:"pink"}} onClick={addition}>+</button>
+    <button style={{backgroundColor:"brown"}}onClick={substraction}>-</button>
+    <button style={{backgroundColor:"yellow"}} onClick={multiplication}>*</button>
+    <button style={{backgroundColor:"blue"}} onClick={division}>/</button>
+    </div>
     {
       success && (
         <div>
